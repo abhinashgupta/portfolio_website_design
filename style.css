@@ -1,0 +1,1281 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Gilroy";
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+}
+
+
+
+#loader{
+    /* display: none; */
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    color: white;
+    z-index: 9999999;
+
+}
+
+#loader #topheading{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50% , 0);
+
+}
+
+#topheading h5{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 300;
+}
+
+#loader h1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 4vw;
+    font-weight: 500;
+}
+#loader h1 #k{
+    color: #14cf93;
+    font-style: italic;
+    font-family: "Mazius Review 20.09";
+    font-weight: 100;
+}
+
+.reveal .parent{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-y: hidden;
+}
+.reveal .parent .child{
+    display: block;
+}
+
+.parent .child span{
+    display: inline-block;
+}
+#green{
+    /* display: none; */
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 999;
+    height: 0vh;
+    background-color: #14cf93;
+}
+
+#home{  
+    width: 100%;
+    background-color:#FCFAF8;
+}
+#home #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 5vw;
+    width: 100%;
+    height: 100px;
+}
+
+#nav a{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+    color: black;
+}
+
+#nav a .line{
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    height: 1px;
+    background-color: #111;
+}
+
+#line1{
+    left: 0;
+    width: 0%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    transition-delay: .1s;
+}
+#line2{
+    right: 0;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    width: 100%;
+}
+
+#nav a:hover #line2{
+    width: 0;
+}
+
+#nav a:hover #line1{
+    width: 100%;
+}
+
+.row{
+   margin-top: 2vw;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   color: #333;
+   padding: 0 7vw;
+   padding-right: 12vw;
+   line-height: 1.2;
+}
+.row h1{
+    font-size: 12vw;
+    font-weight: 500;
+}
+.row .text{
+    margin-top: 0vw;
+}
+.row h5{
+    opacity: .6;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.row:nth-child(3){
+    margin-top: 0;
+}
+
+.row svg{
+    height: 9vw;
+    margin: 0 2.5vw;
+}
+path,polyline{
+    stroke: #14cf93;
+}
+
+#imagery{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 20vw;
+   width: 100%;
+   padding: 7vw 7vw;
+}
+
+#imagery #imglef{
+    width: 30%;
+    height: auto;
+}
+#imglef h1{
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 2.4vw;
+    color: #333;
+}
+#imglef h1 span{
+    color: #14cf93;
+    font-family: "Mazius Review 20.09";
+    font-weight: 100;
+    font-style: italic;
+}
+
+#imgrig{
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 60%;
+    height: 300px;
+}
+
+#imgrig .imgcntnr{
+    position: absolute;
+    width: 27vw;
+    height: 40vw;
+    border-radius: 1vw;
+    filter: grayscale();
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+#imgrig .imgcntnr:hover{
+    filter: grayscale(0);
+}
+
+#imgrig .imgcntnr:nth-child(1){
+    transform:translate(-40%, -8%) rotate(-20deg);
+    background-image: url("https://abhishekjha.me/card1.a0552dbc.png");
+    background-size: cover;
+    background-position: center;
+}
+#imgrig .imgcntnr:nth-child(2){
+    transform:translate(-15%, 0%) rotate(-15deg);
+    background-image: url(https://images.unsplash.com/photo-1540331547168-8b63109225b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=419&q=80);
+    background-size: cover;
+    background-position: center;
+
+}
+#imgrig .imgcntnr:nth-child(3){
+    transform:translate(20%, 10%) rotate(-5deg);
+    background-image: url("https://abhishekjha.me/card2.cfc820ab.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#work{
+    transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    padding-top: 150px;
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    background-color: #F2F2F2;
+}
+
+#work::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: -75px;
+    transform: rotate(-180deg);
+    height: 150px;
+    background-image: url(https://abhishekjha.me/rip.f6d7c4dd.svg);
+    background-size: cover;
+}
+
+#work .workrow{
+    padding: 0 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.workrow h1{
+    display: flex;
+    align-items: baseline;
+    font-size: 8vw;
+    font-weight: 600;
+}
+.workrow h1 .mini{
+    font-size: 2vw;
+    margin-left: 5vw;
+    font-weight: 500;
+}
+
+.workrow  h1 span{
+    color: #14cf93;
+    font-style: italic;
+    font-family: MAZIUS REVIEW 20.09 Ex italic;
+    font-weight: 400;
+}
+
+.o-ui-arrow{
+    width: 5vw;
+    transform: rotate(90deg);
+}
+.o-ui-arrow path{
+    stroke: rgb(158,158,158);
+}
+
+
+#images{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 6vw;
+    position: relative;
+    width: 100%;
+    padding: 0 5vw;
+}
+
+.cnt{
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.cnt img{
+    transition: filter cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    width: 105%;
+}
+
+.cnt1{
+    width: 55%;
+}
+.cnt2{
+    width: 28%;
+}
+
+.cnt3{
+    width: 50%;
+    margin-left: 25%;
+}
+.cnt4{
+    width: 30%;
+    margin-left: 5%;
+}
+.cnt5{
+    width: 45%;
+}
+
+#new{
+    width: 100vw;
+    /* height: 100vh; */
+    background-color: #14cf93;
+}
+#cursor{
+    position: fixed;
+    width: 17vw;
+    top: 25%;
+    left: 0;
+    z-index: 999999;
+    
+}
+
+
+#cursor>div{
+    pointer-events: none;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    opacity: 0;
+    position: absolute;
+}
+
+#elem{
+    width: 100%;
+    position: relative;
+}
+
+
+#cursor .crow{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: .7vw;
+}
+
+.crow .ccircle{
+    width: 2vw;
+    height: 2vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.crow .ccapsule{
+    padding: .7vw 3vw;
+    border-radius: 100px;
+    background-color: #fff;
+}
+ 
+#elem img{
+    width: 100%;
+    opacity: 0;
+    animation: an 4s linear infinite;
+    position: absolute;
+}
+
+#elem img:nth-child(2){
+    animation-delay:1s;
+}
+
+#elem img:nth-child(3){
+    animation-delay: 2s;
+}
+
+#elem img:nth-child(4){
+    animation-delay: 3s;
+}
+
+#elem img:nth-child(5){
+    animation-delay: 4s;
+}
+
+@keyframes an{
+    0%{
+        opacity: 1;
+    }
+
+    20%{
+        opacity: 1;
+    }
+
+    21%{
+        opacity: 0;
+    }
+
+    40%{
+        opacity: 0;
+    }
+
+    60%{
+        opacity: 0;
+    }
+
+    80%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0;
+    }
+
+}
+
+.footbox{
+    position: absolute;
+    height: 10vh;
+    width: 17vw;
+    background-color: white;
+    bottom: 5vh;
+    left: 6vw;
+    border-radius: 50px;
+
+}
+.footicon{
+    margin-left: 20vw;
+    margin-top: -8vh;
+    position: absolute;
+    height: 9vh;
+    width: 9vh;
+    border-radius: 50%;
+    background-color: white;
+}
+.footicon>i{
+    font-size: 4vw;
+    align-items: center;
+}
+.footbox>h3{
+    font-size: 3.5vw;
+    text-align: center;
+    font-family: "Gilroy";
+    font-style: italic;
+    font-weight: 400;
+}
+
+.footsmallbox{
+  
+    position: absolute;
+    height: 9vh;
+    width: 10vw;
+    background-color: white;
+    bottom: 5vh;
+    left: 6vw;
+    border-radius: 50px;
+    margin-left: 65vw;
+    margin-bottom: 2vh;
+}
+.footsmallbox>h3{
+    margin-top: 1vh;
+    font-size: 2.7vw;
+    text-align: center;
+    font-family: "Gilroy";
+    font-style: italic;
+    font-weight: 400;
+}
+.footsmallicon{
+    margin-left: 12vw;
+    margin-top: -7vh;
+    position: absolute;
+    height: 9vh;
+    width: 9vh;
+    border-radius: 50%;
+    background-color: white;
+}
+.footsmallicon>i{
+    font-size: 4vw;
+    align-items: center;
+}
+
+
+#corner{
+   
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 65vw;
+}
+
+#corner #cornerhead h5{
+    font-size: 2vw;
+    font-weight: 300;
+}
+#corner #cornerlower a{
+    font-size: 3vw;
+    font-weight: 500;
+}
+#corner a{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+    color: black;
+}
+
+#corner a .line{
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    height: 1px;
+    background-color: #111;
+}
+
+#line1{
+    left: 0;
+    width: 0%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    transition-delay: .1s;
+}
+#line2{
+    right: 0;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    width: 100%;
+}
+
+#corner a:hover #line2{
+    width: 0;
+}
+
+#corner a:hover #line1{
+    width: 100%;
+}
+
+#see{
+    position: relative;
+    margin-top: 10vh;
+    margin-left: 5vw;
+    height: 10vh;
+    width: 90vw;
+    background-color: rgba(128, 128, 128, 0.636);
+    border-radius: 50px;
+    border: .5px solid black;
+
+}
+#see>h3{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    bottom: 50%;
+    font-size: 2.5vw;
+    font-family: "Gilroy";
+    font-weight: 500;
+}
+#seein{
+    height: 10vh;
+    width: 70vw;
+    margin-left: 9vw;
+    background-color: red;
+}
+#see:hover{
+    cursor: pointer;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    background-color: #F2F2F2;
+}
+
+#honors{
+    margin-top: 5%;
+    display: flex;
+    width: 100%;
+    gap: 28vw;
+    /* background-color: #14cf93; */
+}
+#honorhead>h1{
+    margin-left: 20%;
+    font-family: "Gilroy";
+    font-size: 10vw;
+    font-weight: 500;
+}
+#honorhead>h1>span{
+    color: #14cf93;
+    font-style: italic;
+}
+#allof{
+    font-size: 1vw;
+    margin-top: 8%;
+    font-weight: 100;
+    font-family: "Gilroy";
+    opacity: .5;
+}
+.o-ui-arrow{
+    margin-top: 3%;
+    margin-left: 8%;
+    rotate: -90deg;
+}
+#honorsfeat{
+    display: flex;
+    width: 100%;
+    /* background-color: red; */
+}
+#honorsfeat #left{
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 35%;
+    height: 75vh;
+    /* background-color: greenyellow; */
+}
+#honorsfeat #left #lhead>h5{
+    
+    margin-left: 6%;
+    font-size: 1.5vw;
+    font-weight: 500;
+    font-family: "Gilroy";
+}
+#honorsfeat #left #lshead>h4{
+    font-size: 1.8vw;
+    margin-left: 6%;
+    opacity: .7;
+}
+#honorsfeat #left #limg>img{
+    margin-left: -3vw;
+    object-fit: contain;
+    border-radius: 8vh;
+    height: 40vh;
+    width: 30vw;
+}
+#honorsfeat #left #llowp>h6{
+     font-size: 1.2vw;
+    margin-left: 6%;
+    font-family: "Gilroy";
+    font-weight: 600;
+    opacity: .5;
+}
+#honorsfeat #right{
+    padding: 0vw 4vw;
+    width: 70%;
+    height: 110vh;
+    /* background-color: rgb(75, 47, 255); */
+}
+#honorsfeat #right #rightf{
+    display: flex;
+    justify-content: space-between;
+}
+#honorsfeat #right #rights{
+    display: flex;
+    justify-content: space-between;
+}
+#honorsfeat #right #rightt{
+    display: flex;
+    justify-content: space-between;
+}
+#honorsfeat #right #rightf{
+    display: flex;
+    justify-content: space-between;
+}
+#honorsfeat #right #rightfive{
+    display: flex;
+    justify-content: space-between;
+}
+#honorsfeat #right #rightsix{
+    display: flex;
+    justify-content: space-between;
+}
+#honorsfeat #right #rightseven{
+    display: flex;
+    justify-content: space-between;
+}
+#honorsfeat #right #righteight{
+    display: flex;
+    justify-content: space-between;
+}
+
+#honorsfeat #right .rfhead>h6{
+    font-size: .9vw;
+    font-family: "Gilroy";
+    font-style: italic;
+    opacity: .5;
+}
+#honorsfeat #right .rshead>h4{
+    font-size: 2.5vw;
+    font-family: "Gilroy";
+    opacity: .8;
+}
+#honorsfeat #right .rthead{
+    height: 4vw;
+    width: 4vw;
+    background-color: grey;
+    border-radius: 50%;
+}
+#honorsfeat #right .rthead>i{
+    font-size: 3.5vw;
+    font-family: "Glitten";
+    align-items: center;
+    opacity: .6;
+}
+
+#lettalk{
+    background-color: #253b39;
+    width: 100%;
+    min-height: 100vh;
+}
+#lettalkp1{
+    padding: 0vw 5vw;
+    gap: 12vw;
+    display: flex;
+}
+#lettalkp1 #svgarrow .o-ui-arrow{
+    margin-top: 25vw;
+    margin-left: 20%;
+}
+#lettalkp1 #lettalkp1head h1{
+    color: white;
+    margin-top: 5vw;
+    font-size: 8vw;
+    font-weight: 200;
+}
+#lettalkp1 #lettalkp1head h1 span{
+    margin-left: 20%;
+}
+
+#lettalkp2{
+    display: flex;
+    justify-content: space-around;
+}
+#lettalkp2 .letbut1{
+    margin-top: 5%;
+    height: 15vh;
+    width: 40vw;
+    background-color: transparent;
+    border-radius: 50px;
+    border:1px solid white;
+}
+#lettalkp2 .letbut1 h2{
+    text-align: center;
+    margin-top: 2vw;
+    color: white;
+    font-family: "Gilroy";
+    font-weight: 500;
+}
+#lettalkp2 .letbut1 h2:hover{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    color: #111;
+}
+#lettalkp2 .letbut1:hover{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    cursor: pointer;
+    background-color: white;
+}
+#social{
+    padding-top: 3%;
+    display: flex;
+    justify-content: space-around;
+    background-color:#253b39;
+    width: 100%;
+}
+
+.sone{
+    padding: 1vw 0vw;
+    justify-content: space-around;
+    display: flex;
+    width: 18vw;
+    height: 12vh;
+    background-color: transparent;
+}
+.sone:hover{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    cursor: pointer;
+    background-color: #14cf93;
+}
+.soneh{
+    color: white;
+    font-size: 2vw;
+    font-family: "Gilroy";
+    font-weight: 200;
+}
+.sonel{
+    font-style: italic;
+    font-size: 1vw;
+    color: white;
+}
+.sonep2ci{
+    display: flex;
+    align-items: center;
+    height: 4vw;
+    width: 4vw;
+    border-radius: 50%;
+    background-color: white;
+}
+.sonep2ci i{
+    font-size: 2vw;
+    margin-left: 1vw;
+}
+#copyright{
+    display: flex;
+    padding: 9vw 5vw;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #253b39;
+}
+#cp1 p{
+    color: white;
+    opacity: .5;
+    font-family: "Gilroy";
+    font-weight: 500;
+}
+#cop2 p{
+    color: white;
+    opacity: .5;
+    font-family: "Gilroy";
+    font-weight: 500;
+}
+
+@media (max-width:600px){
+   
+.row {
+    margin-top: 2vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    color: #333;
+    padding: 34px 4vw;
+    padding-right: 7vw;
+    line-height: 1.2;
+}
+#loader {
+    /* display: none; */
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(16, 15, 15);
+    color: white;
+    z-index: 9999999;
+}
+#loader h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 6.4vw;
+    font-weight: 500;
+}
+#topheading h5 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+}
+#home {
+    width: 100%;
+    background-color: black;
+}
+#nav a {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+    color: white;
+}
+#nav a .line {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    height: 1px;
+    background-color: white;
+}
+.row h1 {
+    font-size: 20vw;
+    font-weight: 550;
+    color: white;
+    margin-left: 4vw;
+}
+.row svg {
+    position: absolute;
+    height: 18vw;
+
+    margin: -66px -10vw;
+}
+.kkk{
+
+    display: none;
+}
+.row h5 {
+    display: none;
+    color: white;
+    opacity: .6;
+    font-size: 11px;
+    font-weight: 500;
+    margin-right: 0vw;
+    margin-left: 6vw;
+}
+
+#imgrig {
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 46%;
+    height: 15%;
+}
+#imagery {
+    margin-top: -27vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0vw -11vw;
+}
+#imagery #imglef {
+    width: 40%;
+    height: auto;
+}
+#imglef h1 {
+    height: 53vh;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: white;
+    margin-left: 23vw;
+    margin-top: 132vw;
+    font-size: 5vw;
+    width: 140%;
+}
+#work::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: -75px;
+    transform: rotate(-180deg);
+    height: 84px;
+    background-image: url(https://abhishekjha.me/rip.f6d7c4dd.svg);
+    background-size: cover;
+    background-color: black;
+    margin-top: 10vw;
+}
+#imgrig .imgcntnr {
+    position: absolute;
+    width: 47vw;
+    height: 75vw;
+    border-radius: 1vw;
+    filter: grayscale();
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    margin-top: -42vw;
+    margin-left: -23vw;
+}
+#work {
+    transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    padding-top: 150px;
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    background-color: black;
+}
+.workrow h1 {
+    color: white;
+    display: flex;
+    margin-left: -6vw;
+    align-items: baseline;
+    font-size: 12vw;
+    font-weight: 600;
+    margin-top: -49%;
+}
+
+.cnt1 {
+    margin-top: -14vw;
+    width: 57%;
+}
+.cnt {
+    overflow: hidden;
+    border-radius: 19px;
+}
+
+#cursor {
+    position: fixed;
+    width: 17vw;
+    top: 25%;
+    left: 0;
+    z-index: 999999;
+}
+
+#main {
+    overflow-x: hidden;
+    background-color: black;
+    width: 100%;
+}
+#corner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 65vw;
+    margin-top: -8vw;
+}
+#corner #cornerhead h5 {
+    color: white;
+    font-size: 7vw;
+    font-weight: 300;
+    margin-left: -25vw;
+}
+#corner #cornerlower a {
+    color: white;
+    font-size: 7vw;
+    font-weight: 500;
+    margin-left: -29vw;
+}
+#corner a .line {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    height: 1px;
+    background-color: white;
+}
+#images {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 6vw;
+    position: relative;
+    width: 100%;
+    padding: 6px 4vw;
+}
+#see {
+    position: relative;
+    margin-top: 10vh;
+    margin-left: 5vw;
+    height: 10vh;
+    width: 90vw;
+    background-color: rgba(163, 233, 275, 9.636);
+    border-radius: 50px;
+    border: 0.5px solid black;
+}
+#see>h3 {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    bottom: 57%;
+    font-size: 6.5vw;
+    font-family: "Gilroy";
+    font-weight: 500;
+}
+#honorsfeat {
+    height: 171vh;
+    display: flex;
+    width: 100%;
+    /* background-color: red; */
+}
+#honorhead>h1 {
+    margin-right: -38vw;
+    color: white;
+    margin-left: 20%;
+    font-family: "Gilroy";
+    font-size: 19vw;
+    font-weight: 500;
+    margin-top: 9vw;
+}
+#honorsfeat #left #limg>img {
+    margin-top: -17vw;
+    object-fit: contain;
+    border-radius: 8vh;
+    height: 46vh;
+    width: 87vw;
+}
+#honorsfeat #left #lshead>h4 {
+    font-size: 2.8vw;
+    margin-left: 21%;
+    opacity: .7;
+    letter-spacing: 1vw;
+    display: none;
+}
+#honorsfeat #right {
+    padding: 77vw 0vw;
+    width: 70%;
+    height: 210vh;
+    /* background-color: rgb(75, 47, 255); */
+    margin-left: -40vw;
+}
+#honorsfeat #right .rshead>h4 {
+    margin-left: 4vw;
+    color: white;
+    font-size: 7.5vw;
+    font-family: "Gilroy";
+    font-weight: 100;
+    opacity: 1;
+}
+#honorsfeat #right .rthead {
+    height: 12vw;
+    width: 12vw;
+    background-color: white;
+    border-radius: 50%;
+    
+}
+#honorsfeat #right .rthead>i {
+    font-size: 11.5vw;
+    font-family: "Glitten";
+    align-items: center;
+    font-weight: 100;
+    opacity: 1;
+}
+#lettalkp1 {
+    background-color: black;
+    gap: 12vw;
+    display: flex;
+}
+#lettalkp2 {
+    background-color: black;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+#lettalkp1 #lettalkp1head h1 {
+    width: 157%;
+    color: white;
+    margin-top: 5vw;
+    font-size: 12vw;
+    font-weight: 200;
+    margin-left: -20vw;
+    margin-top: 18vw;
+}
+#lettalkp1 #svgarrow .o-ui-arrow {
+    margin-top: 64vw;
+    margin-left: 20%;
+}
+#lettalkp2 {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+#lettalkp2 .letbut1 {
+    margin-top: 8%;
+    height: 17vh;
+    width: 87vw;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 1px solid white;
+}
+#lettalkp2 .letbut1 h2 {
+    text-align: center;
+    margin-top: 8vw;
+    color: white;
+    font-family: "Gilroy";
+    font-weight: 500;
+    font-size: 6vw;
+}
+#social {
+    flex-direction: column;
+    padding-top: 11%;
+    display: flex;
+    /* justify-content: space-around; */
+    background-color: black;
+    width: 100%;
+}
+.soneh {
+    color: white;
+    font-size: 9vw;
+    font-family: "Gilroy";
+    font-weight: 200;
+    margin-left: 53vw;
+}
+.sonep2ci {
+    display: flex;
+    align-items: center;
+    height: 10vw;
+    width: 10vw;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: 8vw;
+}
+.sonep2ci i {
+    font-size: 6vw;
+    margin-left: 1vw;
+    align-items: center;
+    margin-left: 2vw;
+}
+.sonel {
+    margin-left: 55vw;
+    font-style: italic;
+    font-size: 3vw;
+    color: white;
+}
+.sone:hover {
+    margin-left: 36vw;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    cursor: pointer;
+    background-color: #14cf93;
+}
+#copyright {
+    display: flex;
+    padding: 13vw 2vw;
+    justify-content: space-between;
+    width: 100%;
+    background-color: black;
+}
+#cp1 p {
+    font-size: 3vw;
+    color: white;
+    opacity: .5;
+    font-family: "Gilroy";
+    font-weight: 500;
+}
+#cop2 p {
+    color: white;
+    opacity: .5;
+    font-family: "Gilroy";
+    font-weight: 500;
+    font-size: 3vw;
+}
+#lettalk {
+    background-color: black;
+    width: 100%;
+    min-height: 100vh;
+}
+#honorsfeat #right {
+    padding: 134vw 0vw;
+    width: 70%;
+    height: 210vh;
+    /* background-color: rgb(75, 47, 255); */
+    margin-left: -40vw;
+}
+
+}
+
+@media (max-width:484px) {
+#imglef h1 {
+    height: 53vh;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: white;
+    margin-left: 23vw;
+    margin-top: 192vw;
+    font-size: 5vw;
+    width: 140%;
+}
+#imagery {
+    margin-top: -77vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0vw -11vw;
+}
+#cursor {
+    position: fixed;
+    width: 17vw;
+    top: -1%;
+    left: 0;
+    z-index: 999999;
+}
+#honorsfeat #right {
+    padding: 72vw 0vw;
+    width: 70%;
+    height: 210vh;
+    /* background-color: rgb(75, 47, 255); */
+    margin-left: -40vw;
+}
+}
